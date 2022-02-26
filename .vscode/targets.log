@@ -1,0 +1,469 @@
+make all --print-data-base --no-builtin-variables --no-builtin-rules --question
+make: *** No rule to make target 'all'.  Stop.
+ 
+# GNU Make 4.2.1
+# Built for x86_64-pc-linux-gnu
+# Copyright (C) 1988-2016 Free Software Foundation, Inc.
+# License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+# This is free software: you are free to change and redistribute it.
+# There is NO WARRANTY, to the extent permitted by law.
+
+# Make data base, printed on Thu Feb 24 11:48:21 2022
+
+# Variables
+
+# automatic
+<D = $(patsubst %/,%,$(dir $<))
+# automatic
+?F = $(notdir $?)
+# environment
+PAPERSIZE = a4
+# environment
+DESKTOP_SESSION = xfce
+# default
+.SHELLFLAGS := -c
+# environment
+XDG_SESSION_CLASS = user
+# environment
+XDG_SESSION_TYPE = x11
+# environment
+VSCODE_LOG_NATIVE = false
+# environment
+GTK3_MODULES = xapp-gtk3-module
+# automatic
+?D = $(patsubst %/,%,$(dir $?))
+# environment
+PLATFORMIO_IDE = 2.4.2
+# automatic
+@D = $(patsubst %/,%,$(dir $@))
+# environment
+XAUTHORITY = /home/saleh/.Xauthority
+# environment
+GDMSESSION = xfce
+# default
+MAKE_VERSION := 4.2.1
+# makefile
+CURDIR := /home/saleh/Documents/COE301/rv32im
+# makefile
+SHELL = /bin/sh
+# environment
+GDM_LANG = en_US
+# environment
+VTE_VERSION = 6003
+# environment
+VSCODE_NLS_CONFIG = {"locale":"en-us","availableLanguages":{},"_languagePackSupport":true}
+# environment
+_ = /usr/bin/code
+# makefile (from 'Makefile', line 2)
+CFLAGS = 
+# environment
+XDG_CONFIG_DIRS = /etc/xdg/xdg-xfce:/etc/xdg:/etc/xdg
+# environment
+QSYS_ROOTDIR = /opt/intelFPGA_lite/18.1/bin
+# environment
+STARSHIP_SESSION_KEY = 3967624025886974
+# automatic
+@F = $(notdir $@)
+# 'override' directive
+GNUMAKEFLAGS := 
+# environment
+MAKELEVEL := 0
+# environment
+XDG_DATA_DIRS = /usr/share/xfce4:/home/saleh/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share:/usr/share
+# environment
+DBUS_SESSION_BUS_ADDRESS = unix:path=/run/user/1000/bus
+# environment
+VSCODE_VERBOSE_LOGGING = true
+# makefile (from 'Makefile', line 5)
+TB_DIR = "./tb"
+# makefile (from 'Makefile', line 4)
+RTL_DIR = "./rtl"
+# makefile (from 'Makefile', line 7)
+RTL_FILES := ./rtl/CPU.sv ./rtl/ControlUnit.sv ./rtl/GPIO.sv ./rtl/InstructionMemory.sv ./rtl/DataMemory.sv ./rtl/VGA.sv ./rtl/RegisterFile.sv ./rtl/ALU.sv ./rtl/TOP.sv ./rtl/ForwardingUnit.sv
+# environment
+LESSOPEN = | /usr/bin/lesspipe %s
+# environment
+LC_NAME = en_US.UTF-8
+# environment
+VSCODE_CWD = /home/saleh/Documents/COE301/rv32im
+# environment
+XDG_SESSION_PATH = /org/freedesktop/DisplayManager/Session0
+# default
+MAKE_HOST := x86_64-pc-linux-gnu
+# environment
+NO_PROXY = 127.0.0.1
+# makefile (from 'Makefile', line 8)
+TB_FILES := ./tb/CPU_tb.sv
+# environment
+QUARTUS_ROOTDIR_OVERRIDE = /opt/intelFPGA_lite/18.1/quartus
+# environment
+SESSION_MANAGER = local/coe-salehs:@/tmp/.ICE-unix/1586,unix/coe-salehs:/tmp/.ICE-unix/1586
+# environment
+XDG_RUNTIME_DIR = /run/user/1000
+# environment
+WINDOWID = 25165827
+# makefile (from 'Makefile', line 1)
+MAKEFILE_LIST :=  Makefile
+# environment
+CONDA_PREFIX = /home/saleh/anaconda3
+# environment
+XDG_MENU_PREFIX = xfce-
+# environment
+VSCODE_LOG_STACK = false
+# environment
+VSCODE_CRASH_REPORTER_START_OPTIONS = {"companyName":"Microsoft","productName":"VSCode","submitURL":"appcenter://code?aid=fba07a4d-84bd-4fc8-a125-9640fc8ce171&uid=4bc3970e-d87b-40b1-9a7b-7148b11b9cff&iid=4bc3970e-d87b-40b1-9a7b-7148b11b9cff&sid=4bc3970e-d87b-40b1-9a7b-7148b11b9cff","uploadToServer":true}
+# default
+.FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell archives jobserver output-sync check-symlink load
+# environment
+XDG_GREETER_DATA_DIR = /var/lib/lightdm-data/saleh
+# environment
+LS_COLORS = rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:
+# environment
+XDG_SESSION_DESKTOP = xfce
+# environment
+SSH_AUTH_SOCK = /tmp/ssh-6LnxOVpoAuA1/agent.1586
+# automatic
+%F = $(notdir $%)
+# environment
+DISPLAY = :0.0
+# environment
+CONDA_EXE = /home/saleh/anaconda3/bin/conda
+# environment
+VSCODE_PIPE_LOGGING = true
+# environment
+PWD = /home/saleh/Documents/COE301/rv32im
+# environment
+QT_QPA_PLATFORMTHEME = qt5ct
+# default
+.LOADED := 
+# environment
+XDG_SEAT = seat0
+# environment
+SSH_AGENT_PID = 1663
+# environment
+ORIGINAL_XDG_CURRENT_DESKTOP = XFCE
+# environment
+GTK_MODULES = gail:atk-bridge
+# environment
+VSCODE_AMD_ENTRYPOINT = vs/workbench/services/extensions/node/extensionHostProcess
+# environment
+HOME = /home/saleh
+# environment
+LD_LIBRARY_PATH = /opt/intelFPGA_lite/18.1/modelsim_ase/gcc-4.5.0-linux/lib:/opt/intelFPGA_lite/18.1/modelsim_ase/gcc-4.5.0-linux/lib:
+# environment
+LESSCLOSE = /usr/bin/lesspipe %s %s
+# environment
+RISCV = /opt/riscv
+# environment
+VSCODE_CLI = 1
+# environment
+VSCODE_CODE_CACHE_PATH = /home/saleh/.config/Code/CachedData/f80445acd5a3dadef24aa209168452a3d97cc326
+# environment
+LOGNAME = saleh
+# environment
+APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = 1
+# environment
+CONDA_PROMPT_MODIFIER = (base) 
+# automatic
++F = $(notdir $+)
+# environment
+ELECTRON_NO_ATTACH_CONSOLE = 1
+# environment
+VSCODE_HANDLES_UNCAUGHT_ERRORS = true
+# automatic
+^D = $(patsubst %/,%,$(dir $^))
+# environment
+XDG_VTNR = 7
+# environment
+CLUTTER_BACKEND = x11
+# environment
+LC_TIME = en_US.UTF-8
+# environment
+CONDA_DEFAULT_ENV = base
+# environment
+PLATFORMIO_PATH = /home/saleh/.platformio/python3/bin:/home/saleh/.cargo/bin:/opt/android-studio/bin:/opt/riscv/bin:/opt/intelFPGA_lite/18.1/nios2eds/bin:/opt/intelFPGA_lite/18.1/modelsim_ase/bin:/opt/intelFPGA_lite/18.1/bin/bin:/opt/intelFPGA_lite/18.1/quartus/bin:/opt/android-studio/bin:/opt/riscv/bin:/opt/intelFPGA_lite/18.1/nios2eds/bin:/opt/intelFPGA_lite/18.1/modelsim_ase/bin:/opt/intelFPGA_lite/18.1/bin/bin:/opt/intelFPGA_lite/18.1/quartus/bin:/home/saleh/anaconda3/bin:/home/saleh/anaconda3/condabin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+# environment
+COLORTERM = truecolor
+# default
+MAKE = $(MAKE_COMMAND)
+# default
+MAKECMDGOALS := all
+# environment
+PATH = /home/saleh/.cargo/bin:/opt/android-studio/bin:/opt/riscv/bin:/opt/intelFPGA_lite/18.1/nios2eds/bin:/opt/intelFPGA_lite/18.1/modelsim_ase/bin:/opt/intelFPGA_lite/18.1/bin/bin:/opt/intelFPGA_lite/18.1/quartus/bin:/opt/android-studio/bin:/opt/riscv/bin:/opt/intelFPGA_lite/18.1/nios2eds/bin:/opt/intelFPGA_lite/18.1/modelsim_ase/bin:/opt/intelFPGA_lite/18.1/bin/bin:/opt/intelFPGA_lite/18.1/quartus/bin:/home/saleh/anaconda3/bin:/home/saleh/anaconda3/condabin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+# environment
+SHLVL = 1
+# environment
+VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-5ef8027c-f555-4e27-9284-f4e0d23128b1.sock
+# environment
+COMPIZ_CONFIG_PROFILE = mint
+# environment
+XDG_SESSION_ID = c2
+# environment
+USER = saleh
+# makefile (from 'Makefile', line 1)
+CROSS = riscv32-unknown-elf-
+# environment
+LS_OPTIONS = --color=auto
+# environment
+LC_MONETARY = en_US.UTF-8
+# makefile
+.DEFAULT_GOAL := modelsim
+# environment
+XDG_CURRENT_DESKTOP = XFCE
+# environment
+LIBVIRT_DEFAULT_URI = qemu:///system
+# automatic
+%D = $(patsubst %/,%,$(dir $%))
+# environment
+LC_TELEPHONE = en_US.UTF-8
+# environment
+CONDA_SHLVL = 1
+# default
+MAKE_COMMAND := make
+# environment
+GIT_PS1_SHOWDIRTYSTATE = 1
+# environment
+OLDPWD = /home/saleh/Documents/COE301/rv32im_project/simulation/modelsim
+# default
+.VARIABLES := 
+# automatic
+*F = $(notdir $*)
+# environment
+LANGUAGE = en_US
+# environment
+XDG_SEAT_PATH = /org/freedesktop/DisplayManager/Seat0
+# environment
+VSCODE_IPC_HOOK = /run/user/1000/vscode-52517f7b-1.64.2-main.sock
+# makefile
+MAKEFLAGS = pqrR
+# environment
+MFLAGS = -pqrR
+# automatic
+*D = $(patsubst %/,%,$(dir $*))
+# environment
+BREAKPAD_DUMP_LOCATION = /home/saleh/.config/Code/exthost Crash Reports
+# environment
+QUARTUS_64BIT = 1
+# environment
+MODELSIM_ROOTDIR = /opt/intelFPGA_lite/18.1/modelsim_ase
+# automatic
++D = $(patsubst %/,%,$(dir $+))
+# environment
+GDK_BACKEND = x11
+# environment
+LC_PAPER = en_US.UTF-8
+# environment
+QT_ACCESSIBILITY = 1
+# 'override' directive
+.SHELLSTATUS := 0
+# default
+MAKEFILES := 
+# environment
+NIOS2_ECLIPSE = /opt/intelFPGA_lite/18.1/nios2eds
+# environment
+LC_NUMERIC = en_US.UTF-8
+# automatic
+<F = $(notdir $<)
+# environment
+PLATFORMIO_CALLER = vscode
+# environment
+ELECTRON_RUN_AS_NODE = 1
+# environment
+define PS1
+
+\[[1;36m\]Documents/COE301/rv32im\[[0m\] took \[[1;33m\]11h52m8s\[[0m\] 
+\[[1;34m\]✦\[[0m\]\[[1;34m\]\[[0m\] \[[1;32m\]❯\[[0m\] 
+endef
+# environment
+LC_MEASUREMENT = en_US.UTF-8
+# environment
+LC_ALL = C
+# environment
+CONDA_PYTHON_EXE = /home/saleh/anaconda3/bin/python
+# automatic
+^F = $(notdir $^)
+# default
+SUFFIXES := 
+# environment
+_CE_M = 
+# environment
+CHROME_DESKTOP = code-url-handler.desktop
+# environment
+_CE_CONDA = 
+# default
+.INCLUDE_DIRS = /usr/include /usr/local/include /usr/include
+# environment
+LC_IDENTIFICATION = en_US.UTF-8
+# default
+.RECIPEPREFIX := 
+# environment
+LC_ADDRESS = en_US.UTF-8
+# environment
+LANG = C
+# environment
+TERM = xterm-256color
+# environment
+VSCODE_PID = 554492
+# environment
+STARSHIP_SHELL = bash
+# variable set hash-table stats:
+# Load=145/1024=14%, Rehash=0, Collisions=23/187=12%
+
+# Pattern-specific Variable Values
+
+ 
+# No pattern-specific variable values.
+
+# Directories
+
+# . (device 2053, inode 10347682): 17 files, no impossibilities.
+
+# 17 files, no impossibilities in 1 directories.
+
+# Implicit Rules
+
+# No implicit rules.
+
+# Files
+
+# Not a target:
+rtl/ForwardingUnit.sv:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+all:
+#  Command line target.
+#  Implicit rule search has been done.
+#  File does not exist.
+#  File has not been updated.
+
+# Not a target:
+rtl/TOP.sv:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+rtl/VGA.sv:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+Makefile:
+#  Implicit rule search has been done.
+#  Last modified 2022-02-23 13:57:18.506775561
+#  File has been updated.
+#  Successfully updated.
+
+modelsim: rtl/CPU.sv rtl/ControlUnit.sv rtl/GPIO.sv rtl/InstructionMemory.sv rtl/DataMemory.sv rtl/VGA.sv rtl/RegisterFile.sv rtl/ALU.sv rtl/TOP.sv rtl/ForwardingUnit.sv tb/CPU_tb.sv
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 15):
+	vsim -do rv32im.do
+	#vsim -do $(DO_COMMAND)
+
+# Not a target:
+rtl/CPU.sv:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+rtl/GPIO.sv:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+yosys: rtl/CPU.sv rtl/ControlUnit.sv rtl/GPIO.sv rtl/InstructionMemory.sv rtl/DataMemory.sv rtl/VGA.sv rtl/RegisterFile.sv rtl/ALU.sv rtl/TOP.sv rtl/ForwardingUnit.sv tb/CPU_tb.sv
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 18):
+	yosys -s yosys_syn
+	# yosys -o rv32im.blif -S $^
+
+# Not a target:
+rtl/RegisterFile.sv:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+.DEFAULT:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+iverilog: rtl/CPU.sv rtl/ControlUnit.sv rtl/GPIO.sv rtl/InstructionMemory.sv rtl/DataMemory.sv rtl/VGA.sv rtl/RegisterFile.sv rtl/ALU.sv rtl/TOP.sv rtl/ForwardingUnit.sv tb/CPU_tb.sv
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 22):
+	iverilog $^ -g2012 -o rv32im_test -s CPU
+
+clean:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 29):
+	rm -f *.vvp *.vcd *.blif *.wlf transcript
+
+lint: rtl/CPU.sv rtl/ControlUnit.sv rtl/GPIO.sv rtl/InstructionMemory.sv rtl/DataMemory.sv rtl/VGA.sv rtl/RegisterFile.sv rtl/ALU.sv rtl/TOP.sv rtl/ForwardingUnit.sv tb/CPU_tb.sv
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 25):
+	# verible-verilog-lint --rules=-unpacked-dimensions-range-ordering,-explicit-parameter-storage-type,-parameter-name-style $^ | less
+	svlint $^
+
+# Not a target:
+rtl/DataMemory.sv:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+rtl/ALU.sv:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+rtl/InstructionMemory.sv:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+tb/CPU_tb.sv:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+rtl/ControlUnit.sv:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# files hash-table stats:
+# Load=20/1024=2%, Rehash=0, Collisions=0/74=0%
+# VPATH Search Paths
+
+# No 'vpath' search paths.
+
+# No general ('VPATH' variable) search path.
+
+# strcache buffers: 1 (0) / strings = 38 / storage = 423 B / avg = 11 B
+# current buf: size = 8162 B / used = 423 B / count = 38 / avg = 11 B
+
+# strcache performance: lookups = 80 / hit rate = 52%
+# hash-table stats:
+# Load=38/8192=0%, Rehash=0, Collisions=1/80=1%
+# Finished Make data base on Thu Feb 24 11:48:21 2022
+
+ 

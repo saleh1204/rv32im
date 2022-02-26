@@ -1,0 +1,88 @@
+[*]
+[*] GTKWave Analyzer v3.3.103 (w)1999-2019 BSI
+[*] Thu Feb 17 08:44:36 2022
+[*]
+[dumpfile] "/home/saleh/Documents/COE301/rv32im/cpu_tb.vcd"
+[dumpfile_mtime] "Thu Feb 17 08:43:46 2022"
+[dumpfile_size] 69632
+[savefile] "/home/saleh/Documents/COE301/rv32im/sim.gtkw"
+[timestart] 0
+[size] 1920 1021
+[pos] -1 -1
+*-7.011178 145 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] CPU_tb.
+[sst_width] 212
+[signals_width] 206
+[sst_expanded] 1
+[sst_vpaned_height] 296
+@28
+CPU_tb.dut.ACLK
+CPU_tb.dut.ARESETN
+@24
+CPU_tb.dut.program_counter1[31:0]
+@22
+CPU_tb.dut.opcode[6:0]
+@24
+CPU_tb.dut.rd2[4:0]
+CPU_tb.dut.rd3[4:0]
+CPU_tb.dut.rd4[4:0]
+CPU_tb.dut.rd5[4:0]
+@28
+CPU_tb.dut.busWSel2[1:0]
+CPU_tb.dut.busWSel3[1:0]
+CPU_tb.dut.busWSel4[1:0]
+@24
+CPU_tb.dut.busWSel5[1:0]
+CPU_tb.dut.aluOP2[4:0]
+CPU_tb.dut.portA2[31:0]
+CPU_tb.dut.portA3[31:0]
+CPU_tb.dut.portB2[31:0]
+CPU_tb.dut.portB3[31:0]
+CPU_tb.dut.aluResult3[31:0]
+CPU_tb.dut.aluOP3[4:0]
+CPU_tb.dut.rs1[4:0]
+CPU_tb.dut.rs2[4:0]
+@28
+CPU_tb.dut.regWrite2
+CPU_tb.dut.regWrite3
+CPU_tb.dut.regWrite4
+CPU_tb.dut.regWrite5
+@c00025
+CPU_tb.dut.busW5[31:0]
+@29
+(0)CPU_tb.dut.busW5[31:0]
+(1)CPU_tb.dut.busW5[31:0]
+(2)CPU_tb.dut.busW5[31:0]
+(3)CPU_tb.dut.busW5[31:0]
+(4)CPU_tb.dut.busW5[31:0]
+(5)CPU_tb.dut.busW5[31:0]
+(6)CPU_tb.dut.busW5[31:0]
+(7)CPU_tb.dut.busW5[31:0]
+(8)CPU_tb.dut.busW5[31:0]
+(9)CPU_tb.dut.busW5[31:0]
+(10)CPU_tb.dut.busW5[31:0]
+(11)CPU_tb.dut.busW5[31:0]
+(12)CPU_tb.dut.busW5[31:0]
+(13)CPU_tb.dut.busW5[31:0]
+(14)CPU_tb.dut.busW5[31:0]
+(15)CPU_tb.dut.busW5[31:0]
+(16)CPU_tb.dut.busW5[31:0]
+(17)CPU_tb.dut.busW5[31:0]
+(18)CPU_tb.dut.busW5[31:0]
+(19)CPU_tb.dut.busW5[31:0]
+(20)CPU_tb.dut.busW5[31:0]
+(21)CPU_tb.dut.busW5[31:0]
+(22)CPU_tb.dut.busW5[31:0]
+(23)CPU_tb.dut.busW5[31:0]
+(24)CPU_tb.dut.busW5[31:0]
+(25)CPU_tb.dut.busW5[31:0]
+(26)CPU_tb.dut.busW5[31:0]
+(27)CPU_tb.dut.busW5[31:0]
+(28)CPU_tb.dut.busW5[31:0]
+(29)CPU_tb.dut.busW5[31:0]
+(30)CPU_tb.dut.busW5[31:0]
+(31)CPU_tb.dut.busW5[31:0]
+@1401201
+-group_end
+[pattern_trace] 1
+[pattern_trace] 0

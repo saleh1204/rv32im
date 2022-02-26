@@ -1,0 +1,14 @@
+read_verilog -sv "./rtl/RegisterFile.sv"
+read_verilog -sv "./rtl/InstructionMemory.sv"
+read_verilog -sv "./rtl/ALU.sv"
+read_verilog -sv "./rtl/ControlUnit.sv"
+read_verilog -sv "./rtl/ForwardingUnit.sv"
+read_verilog -sv "./rtl/DataMemory.sv"
+read_verilog -sv "./rtl/VGA.sv"
+read_verilog -sv "./rtl/CPU.sv"
+
+opt 
+synth_intel -family cycloneive -top CPU -retime
+# synth_intel_alm -family cyclonev -top CPU -quartus 
+
+write_blif -top CPU rv32im.blif
