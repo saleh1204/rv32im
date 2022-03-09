@@ -1,5 +1,6 @@
-work/*
+work/
 transcript
 *.wlf
 *.blif
 *.vcd
+*.pdf
