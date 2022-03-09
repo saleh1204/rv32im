@@ -84,7 +84,7 @@ module CPU (
 
     // Stage 1: Instruction Fetch
     // Instruction Fetch
-    InstructionMemory #(.IMSIZE(8192)) im
+    InstructionMemory #(.IMSIZE(1024)) im
     (   .clk(ACLK), .address(program_counter1), .instruction(instruction1));
 
     always_ff @(posedge ACLK or posedge RESET) begin
@@ -94,8 +94,11 @@ module CPU (
         else if (jal2 == 1'b1 || jalr2 == 1'b1 || branch2 == 1'b1) begin
             instruction2 <= 32'd0;
         end
+        else if (stallALU3 == 1'b1) begin
+          instruction2 <= instruction2;
+        end
         else begin
-            instruction2 <= instruction1;
+          instruction2 <= instruction1;
         end
     end
     // Stage 2: Instruction Decode, Register File and Conteol Unit
@@ -127,8 +130,8 @@ module CPU (
         .RegWrite(regWrite5), .BusW(busW5), .BusA(busA2), .BusB(busB2));
 
     // always block to propogate the signals from the second stage to the other stages.
-    always_ff @(posedge ACLK or negedge RESET) begin
-        if (RESET == 1'b0) begin
+    always_ff @(posedge ACLK or posedge RESET) begin
+        if (RESET == 1'b1) begin
             regWrite3        <= 1'b0;
             regWrite4        <= 1'b0;
             regWrite5        <= 1'b0;
@@ -181,11 +184,22 @@ module CPU (
                 memRead3    <= memRead2;
                 memWrite3   <= memWrite2;
             end
+            case (forwardB)
+              2'd0: 
+                busB3 <= busB2;
+              2'd1: 
+                busB3 <= aluResult3;
+              2'd2: 
+                busB3 <= memResult4;
+              2'd3:
+                busB3 <= busW5;
+              default: 
+                busB3 <= 32'd0;
+            endcase
             regWrite5        <= regWrite4;
             rd5              <= rd4;
             memRead4         <= memRead3;
             memWrite4        <= memWrite3;
-            busB3            <= busB2;
             busB4            <= busB3;
             portA3           <= portA2;
             portB3           <= portB2;
@@ -263,16 +277,17 @@ module CPU (
         stallALU3    <= 1'b0;
       end
       else begin
-        if (stallALU2 == 1'b1) begin
+        if (stallALU2 == 1'b1 && stallALU3 == 1'b0) begin
           stallALU3    <= 1'b1;
           stallCycles3 <= stallCycles2;
+        end
+        else if (stallCycles3 == 4'd1) begin
+          stallCycles3 <= stallCycles3 - 4'd1;
+          stallALU3    <= 1'b0;
         end
         else if (stallCycles3 != 4'd0) begin
           stallCycles3 <= stallCycles3 - 4'd1;
           stallALU3    <= 1'b1;
-        end
-        else if (stallCycles3 == 4'd0) begin
-          stallALU3    <= 1'b0;
         end
       end
     end

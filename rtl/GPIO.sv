@@ -38,4 +38,4 @@ module GPIO #(
     end
   end
 
-endmodule
+endmodule: GPIO

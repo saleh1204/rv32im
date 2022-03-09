@@ -28,7 +28,10 @@ vsim -t 1ps -L work -L twentynm_ver -L altera_ver -L altera_lnsim_ver -L lpm_ver
 quietly WaveActivateNextPane {} 0
 add wave  -format Logic -label CLK CLK 
 add wave  -format Logic -label RST RESET 
-add wave  -format Literal -radix hex -label PC dut/cpu/program_counter1
+add wave  -format Literal -radix hex -label PC1 dut/cpu/program_counter1
+add wave  -format Literal -radix hex -label PC2 dut/cpu/program_counter2
+add wave  -format Literal -radix hex -label PC3 dut/cpu/program_counter3
+add wave  -format Literal -radix hex -label PC4 dut/cpu/program_counter4
 add wave  -format Literal -radix hex -label INST dut/cpu/instruction1
 view structure
 view signals 

@@ -109,4 +109,4 @@ module ALU (
     endcase
   end
 
-endmodule
+endmodule: ALU

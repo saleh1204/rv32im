@@ -105,6 +105,7 @@ module ControlUnit (
                 memNoBytes = 2'd0;  // Load Single Byte
                 aluop      = 5'd0;  // ADD
                 busWSel    = 2'd1;  // store memory result
+                portBSrc   = 2'd1;  // I-Immediate
               end
             3'b001: // LH
               begin
@@ -113,6 +114,7 @@ module ControlUnit (
                 memNoBytes = 2'd1;  // Load Two Bytes
                 aluop      = 5'd0;  // ADD
                 busWSel    = 2'd1;  // store memory result
+                portBSrc   = 2'd1;  // I-Immediate
               end
             3'b010: // LW
               begin
@@ -121,6 +123,7 @@ module ControlUnit (
                 memNoBytes = 2'd2;  // Load Four Bytes
                 aluop      = 5'd0;  // ADD
                 busWSel    = 2'd1;  // store memory result
+                portBSrc   = 2'd1;  // I-Immediate
               end
             3'b100: // LBU
               begin
@@ -129,6 +132,7 @@ module ControlUnit (
                 memNoBytes = 2'd0;  // Load Single Byte
                 aluop      = 5'd0;  // ADD
                 busWSel    = 2'd1;  // store memory result
+                portBSrc   = 2'd1;  // I-Immediate
               end
             3'b101: // LHU
               begin
@@ -137,6 +141,7 @@ module ControlUnit (
                 memNoBytes = 2'd1;  // Load Two Bytes
                 aluop      = 5'd0;  // ADD
                 busWSel    = 2'd1;  // store memory result
+                portBSrc   = 2'd1;  // I-Immediate
               end
             default:
               begin
@@ -153,18 +158,21 @@ module ControlUnit (
                 memWrite   = 1'b1;  // Write to Data Memory
                 memNoBytes = 2'd0;  // Store Single Byte
                 aluop      = 5'd0;  // ADD
+                portBSrc   = 2'd2;  // S-Immediate
               end
             3'b001: // SH
               begin
                 memWrite   = 1'b1;  // Write to Data Memory
                 memNoBytes = 2'd1;  // Store Two Bytes
                 aluop      = 5'd0;  // ADD
+                portBSrc   = 2'd2;  // S-Immediate
               end
             3'b010: // SW
               begin
                 memWrite   = 1'b1;  // Write to Data Memory
                 memNoBytes = 2'd2;  // Store Four Bytes
                 aluop      = 5'd0;  // ADD
+                portBSrc   = 2'd2;  // S-Immediate
               end
             default:
               begin
@@ -395,4 +403,4 @@ module ControlUnit (
         end
     endcase
   end
-endmodule
+endmodule: ControlUnit

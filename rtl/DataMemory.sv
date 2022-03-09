@@ -22,4 +22,4 @@ module DataMemory #(
       mem[ADDR] <= DATA_I;
     end
   end
-endmodule
+endmodule: DataMemory

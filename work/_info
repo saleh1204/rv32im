@@ -10,7 +10,7 @@ cModel Technology
 Z0 d/home/saleh/Documents/COE301/rv32im
 vALU
 Z1 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
-Z2 !s110 1645706957
+Z2 !s110 1646043450
 !i10b 1
 !s100 [b9aP@_EQRLD72J8YRfaB0
 I>Yn<SSJ9ka4KEUACYb2=]1
@@ -18,7 +18,7 @@ Z3 VDg1SIo80bB@j0V0VzS_@n1
 !s105 ALU_sv_unit
 S1
 R0
-w1645612475
+w1645872773
 8./rtl/ALU.sv
 F./rtl/ALU.sv
 L0 1
@@ -26,7 +26,7 @@ Z4 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z5 !s108 1645706957.000000
+Z5 !s108 1646043450.000000
 !s107 ./rtl/ALU.sv|
 !s90 -reportprogress|300|-sv|-sv12compat|./rtl/ALU.sv|
 !i113 1
@@ -37,13 +37,13 @@ vControlUnit
 R1
 R2
 !i10b 1
-!s100 XO<m;oK^3SQj@X7nN9J8n3
-Ioi?>@2eaW1>CKgc2jl8a40
+!s100 @>DEcgHgk9Q^a5nb9PS=D0
+I42NiT@QeM43ZS?0<VA<DN1
 R3
 !s105 ControlUnit_sv_unit
 S1
 R0
-w1645706928
+w1645953514
 8./rtl/ControlUnit.sv
 F./rtl/ControlUnit.sv
 L0 1
@@ -62,13 +62,13 @@ vCPU
 R1
 R2
 !i10b 1
-!s100 5U27n<aQY@75W2IPjQzhc3
-ISL;j8=6]5>LF0Pf:[DIMD3
+!s100 2[<4fCX8A=G5Me:km8CIQ2
+I`QfhGlga<R]RJEcOn7BT91
 R3
 !s105 CPU_sv_unit
 S1
 R0
-w1645622300
+w1646043427
 8./rtl/CPU.sv
 F./rtl/CPU.sv
 L0 1
@@ -93,7 +93,7 @@ R3
 !s105 DataMemory_sv_unit
 S1
 R0
-w1645612436
+w1645872752
 8./rtl/DataMemory.sv
 F./rtl/DataMemory.sv
 L0 1
@@ -158,7 +158,7 @@ R3
 !s105 ForwardingUnit_sv_unit
 S1
 R0
-w1644748209
+w1645872744
 8./rtl/ForwardingUnit.sv
 F./rtl/ForwardingUnit.sv
 L0 1
@@ -183,7 +183,7 @@ R3
 !s105 GPIO_sv_unit
 S1
 R0
-w1645625336
+w1645872737
 8./rtl/GPIO.sv
 F./rtl/GPIO.sv
 L0 1
@@ -267,13 +267,13 @@ vRegisterFile
 R1
 R2
 !i10b 1
-!s100 Z?MjOnMJJDd>KAiBWgHSI0
-I19jjJ;m82]AHQAHZB4UNU2
+!s100 URVh`ma=82<VS5NQghcQj0
+I]OA=dki@^:^=[Vcg03_O^2
 R3
 !s105 RegisterFile_sv_unit
 S1
 R0
-w1645613036
+w1646042616
 8./rtl/RegisterFile.sv
 F./rtl/RegisterFile.sv
 L0 1
@@ -298,7 +298,7 @@ R3
 !s105 TOP_sv_unit
 S1
 R0
-w1645625347
+w1645872652
 8./rtl/TOP.sv
 F./rtl/TOP.sv
 L0 1
@@ -323,7 +323,7 @@ R3
 !s105 TOP_tb_sv_unit
 S1
 R0
-w1645692691
+w1645872851
 8./tb/TOP_tb.sv
 F./tb/TOP_tb.sv
 L0 2

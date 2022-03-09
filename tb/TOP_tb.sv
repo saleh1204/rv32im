@@ -13,15 +13,15 @@ module TOP_tb;
         $dumpvars(0, TOP_tb);
         RESET = 1'b1;
         CLK = 1'b0;
-        @(negedge CLK) 
+        @(negedge CLK)
         RESET = 1'b0;
         repeat(10) @(negedge CLK);
         RESET = 1'b1;
         repeat(100) @(negedge CLK);
-        $stop; 
+        $stop;
     end
     always begin
         #5 CLK = ~CLK;
     end
 
-endmodule
+endmodule: TOP_tb
