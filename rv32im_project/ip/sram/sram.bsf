@@ -1,0 +1,177 @@
+/*
+WARNING: Do NOT edit the input and output ports in this file in a text
+editor if you plan to continue editing the block that represents it in
+the Block Editor! File corruption is VERY likely to occur.
+*/
+/*
+Copyright (C) 2018  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+*/
+(header "symbol" (version "1.1"))
+(symbol
+	(rect 0 0 336 416)
+	(text "sram" (rect 154 -1 175 11)(font "Arial" (font_size 10)))
+	(text "inst" (rect 8 400 20 412)(font "Arial" ))
+	(port
+		(pt 0 72)
+		(input)
+		(text "clk_clk" (rect 0 0 27 12)(font "Arial" (font_size 8)))
+		(text "clk_clk" (rect 4 61 46 72)(font "Arial" (font_size 8)))
+		(line (pt 0 72)(pt 128 72)(line_width 1))
+	)
+	(port
+		(pt 0 112)
+		(input)
+		(text "reset_reset" (rect 0 0 46 12)(font "Arial" (font_size 8)))
+		(text "reset_reset" (rect 4 101 70 112)(font "Arial" (font_size 8)))
+		(line (pt 0 112)(pt 128 112)(line_width 1))
+	)
+	(port
+		(pt 0 288)
+		(input)
+		(text "sram_io_address[19..0]" (rect 0 0 94 12)(font "Arial" (font_size 8)))
+		(text "sram_io_address[19..0]" (rect 4 277 136 288)(font "Arial" (font_size 8)))
+		(line (pt 0 288)(pt 128 288)(line_width 3))
+	)
+	(port
+		(pt 0 304)
+		(input)
+		(text "sram_io_byteenable[1..0]" (rect 0 0 100 12)(font "Arial" (font_size 8)))
+		(text "sram_io_byteenable[1..0]" (rect 4 293 148 304)(font "Arial" (font_size 8)))
+		(line (pt 0 304)(pt 128 304)(line_width 3))
+	)
+	(port
+		(pt 0 320)
+		(input)
+		(text "sram_io_read" (rect 0 0 56 12)(font "Arial" (font_size 8)))
+		(text "sram_io_read" (rect 4 309 76 320)(font "Arial" (font_size 8)))
+		(line (pt 0 320)(pt 128 320)(line_width 1))
+	)
+	(port
+		(pt 0 336)
+		(input)
+		(text "sram_io_write" (rect 0 0 56 12)(font "Arial" (font_size 8)))
+		(text "sram_io_write" (rect 4 325 82 336)(font "Arial" (font_size 8)))
+		(line (pt 0 336)(pt 128 336)(line_width 1))
+	)
+	(port
+		(pt 0 352)
+		(input)
+		(text "sram_io_writedata[15..0]" (rect 0 0 96 12)(font "Arial" (font_size 8)))
+		(text "sram_io_writedata[15..0]" (rect 4 341 148 352)(font "Arial" (font_size 8)))
+		(line (pt 0 352)(pt 128 352)(line_width 3))
+	)
+	(port
+		(pt 0 168)
+		(output)
+		(text "sram_ADDR[19..0]" (rect 0 0 81 12)(font "Arial" (font_size 8)))
+		(text "sram_ADDR[19..0]" (rect 4 157 100 168)(font "Arial" (font_size 8)))
+		(line (pt 0 168)(pt 128 168)(line_width 3))
+	)
+	(port
+		(pt 0 184)
+		(output)
+		(text "sram_LB_N" (rect 0 0 51 12)(font "Arial" (font_size 8)))
+		(text "sram_LB_N" (rect 4 173 58 184)(font "Arial" (font_size 8)))
+		(line (pt 0 184)(pt 128 184)(line_width 1))
+	)
+	(port
+		(pt 0 200)
+		(output)
+		(text "sram_UB_N" (rect 0 0 53 12)(font "Arial" (font_size 8)))
+		(text "sram_UB_N" (rect 4 189 58 200)(font "Arial" (font_size 8)))
+		(line (pt 0 200)(pt 128 200)(line_width 1))
+	)
+	(port
+		(pt 0 216)
+		(output)
+		(text "sram_CE_N" (rect 0 0 54 12)(font "Arial" (font_size 8)))
+		(text "sram_CE_N" (rect 4 205 58 216)(font "Arial" (font_size 8)))
+		(line (pt 0 216)(pt 128 216)(line_width 1))
+	)
+	(port
+		(pt 0 232)
+		(output)
+		(text "sram_OE_N" (rect 0 0 54 12)(font "Arial" (font_size 8)))
+		(text "sram_OE_N" (rect 4 221 58 232)(font "Arial" (font_size 8)))
+		(line (pt 0 232)(pt 128 232)(line_width 1))
+	)
+	(port
+		(pt 0 248)
+		(output)
+		(text "sram_WE_N" (rect 0 0 57 12)(font "Arial" (font_size 8)))
+		(text "sram_WE_N" (rect 4 237 58 248)(font "Arial" (font_size 8)))
+		(line (pt 0 248)(pt 128 248)(line_width 1))
+	)
+	(port
+		(pt 0 368)
+		(output)
+		(text "sram_io_readdata[15..0]" (rect 0 0 96 12)(font "Arial" (font_size 8)))
+		(text "sram_io_readdata[15..0]" (rect 4 357 142 368)(font "Arial" (font_size 8)))
+		(line (pt 0 368)(pt 128 368)(line_width 3))
+	)
+	(port
+		(pt 0 384)
+		(output)
+		(text "sram_io_readdatavalid" (rect 0 0 90 12)(font "Arial" (font_size 8)))
+		(text "sram_io_readdatavalid" (rect 4 373 130 384)(font "Arial" (font_size 8)))
+		(line (pt 0 384)(pt 128 384)(line_width 1))
+	)
+	(port
+		(pt 0 152)
+		(bidir)
+		(text "sram_DQ[15..0]" (rect 0 0 64 12)(font "Arial" (font_size 8)))
+		(text "sram_DQ[15..0]" (rect 4 141 88 152)(font "Arial" (font_size 8)))
+		(line (pt 0 152)(pt 128 152)(line_width 3))
+	)
+	(drawing
+		(text "clk" (rect 113 43 244 99)(font "Arial" (color 128 0 0)(font_size 9)))
+		(text "clk" (rect 133 67 284 144)(font "Arial" (color 0 0 0)))
+		(text "reset" (rect 99 83 228 179)(font "Arial" (color 128 0 0)(font_size 9)))
+		(text "reset" (rect 133 107 296 224)(font "Arial" (color 0 0 0)))
+		(text "sram" (rect 99 123 222 259)(font "Arial" (color 128 0 0)(font_size 9)))
+		(text "DQ" (rect 133 147 278 304)(font "Arial" (color 0 0 0)))
+		(text "ADDR" (rect 133 163 290 336)(font "Arial" (color 0 0 0)))
+		(text "LB_N" (rect 133 179 290 368)(font "Arial" (color 0 0 0)))
+		(text "UB_N" (rect 133 195 290 400)(font "Arial" (color 0 0 0)))
+		(text "CE_N" (rect 133 211 290 432)(font "Arial" (color 0 0 0)))
+		(text "OE_N" (rect 133 227 290 464)(font "Arial" (color 0 0 0)))
+		(text "WE_N" (rect 133 243 290 496)(font "Arial" (color 0 0 0)))
+		(text "sram_io" (rect 81 259 204 531)(font "Arial" (color 128 0 0)(font_size 9)))
+		(text "address" (rect 133 283 308 576)(font "Arial" (color 0 0 0)))
+		(text "byteenable" (rect 133 299 326 608)(font "Arial" (color 0 0 0)))
+		(text "read" (rect 133 315 290 640)(font "Arial" (color 0 0 0)))
+		(text "write" (rect 133 331 296 672)(font "Arial" (color 0 0 0)))
+		(text "writedata" (rect 133 347 320 704)(font "Arial" (color 0 0 0)))
+		(text "readdata" (rect 133 363 314 736)(font "Arial" (color 0 0 0)))
+		(text "readdatavalid" (rect 133 379 344 768)(font "Arial" (color 0 0 0)))
+		(text " sram " (rect 311 400 658 810)(font "Arial" ))
+		(line (pt 128 32)(pt 208 32)(line_width 1))
+		(line (pt 208 32)(pt 208 400)(line_width 1))
+		(line (pt 128 400)(pt 208 400)(line_width 1))
+		(line (pt 128 32)(pt 128 400)(line_width 1))
+		(line (pt 129 52)(pt 129 76)(line_width 1))
+		(line (pt 130 52)(pt 130 76)(line_width 1))
+		(line (pt 129 92)(pt 129 116)(line_width 1))
+		(line (pt 130 92)(pt 130 116)(line_width 1))
+		(line (pt 129 132)(pt 129 252)(line_width 1))
+		(line (pt 130 132)(pt 130 252)(line_width 1))
+		(line (pt 129 268)(pt 129 388)(line_width 1))
+		(line (pt 130 268)(pt 130 388)(line_width 1))
+		(line (pt 0 0)(pt 336 0)(line_width 1))
+		(line (pt 336 0)(pt 336 416)(line_width 1))
+		(line (pt 0 416)(pt 336 416)(line_width 1))
+		(line (pt 0 0)(pt 0 416)(line_width 1))
+	)
+)

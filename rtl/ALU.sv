@@ -8,48 +8,44 @@ module ALU (
 );
   // multiplication
   logic [63:00] multiplication_signed, multiplication_unsigned, multiplication_signed_unsigned;
-  mul mul_signed(
-  .aclr(RESET),
-  .clken(1'b1),
-  .clock(ACLK),
-  .dataa(A),
-  .datab(B),
-  .result(multiplication_signed)
+  mul_signed mul_s(
+    .aclr(RESET),
+    .clock(ACLK),
+    .dataa(A),
+    .datab(B),
+    .result(multiplication_signed)
   );
-  mulu mul_unsigned(
-  .clock(ACLK),
-  .dataa(A),
-  .datab(B),
-  .result(multiplication_unsigned));
-//  assign multiplication_signed = $signed(A) * $signed(B);
-//  assign multiplication_unsigned = A * B;
-//  assign multiplication_signed_unsigned = $signed(A) * B;
+
+  mul_unsigned mul_u(
+    .aclr(RESET),
+    .clock(ACLK),
+    .dataa(A),
+    .datab(B),
+    .result(multiplication_unsigned)
+  );
   assign multiplication_signed_unsigned = multiplication_signed;
 
   // division
   logic [31:00] division_signed, division_unsigned, remainder_signed, remainder_unsigned;
-  div div_signed(
-  .aclr(RESET),
-  .clken(1'b1),
-  .clock(ACLK),
-  .denom(B),
-  .numer(A),
-  .quotient(division_signed),
-  .remain(remainder_signed)
+  div_signed div_s(
+    .aclr(RESET),
+    .clock(ACLK),
+    .denom(B),
+    .numer(A),
+    .quotient(division_signed),
+    .remain(remainder_signed)
   );
-   divu div_unsigned(
-  .aclr(RESET),
-  .clken(1'b1),
-  .clock(ACLK),
-  .denom(B),
-  .numer(A),
-  .quotient(division_unsigned),
-  .remain(remainder_unsigned)
+
+  div_unsigned div_u(
+    .aclr(RESET),
+    .clock(ACLK),
+    .denom(B),
+    .numer(A),
+    .quotient(division_unsigned),
+    .remain(remainder_unsigned)
   );
-//  assign division_signed = $signed(A) / $signed(B);
-//  assign division_unsigned = A / B;
-//  assign remainder_signed = $signed(A) % $signed(B);
-//  assign remainder_unsigned = A % B;
+
+
   always_comb begin
     case (aluop)
       5'd00:    ALUResult = A  +  B; // ADD

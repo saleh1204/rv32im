@@ -4,3 +4,9 @@ transcript
 *.blif
 *.vcd
 *.pdf
+.qsys_edit/
+db/
+incremental_db/
+*.rpt
+*.summary
+*.smsg

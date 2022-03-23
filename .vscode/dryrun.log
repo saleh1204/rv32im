@@ -1,7 +1,0 @@
-make --dry-run --always-make --keep-going --print-directory
-make: Entering directory '/home/saleh/Documents/COE301/rv32im'
- 
-vsim -do rv32im.do
-#vsim -do 
-make: Leaving directory '/home/saleh/Documents/COE301/rv32im'
- 

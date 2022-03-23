@@ -1,0 +1,85 @@
+/*
+WARNING: Do NOT edit the input and output ports in this file in a text
+editor if you plan to continue editing the block that represents it in
+the Block Editor! File corruption is VERY likely to occur.
+*/
+/*
+Copyright (C) 2018  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+*/
+(header "symbol" (version "1.2"))
+(symbol
+	(rect 0 0 176 112)
+	(text "div_unsigned" (rect 50 0 144 16)(font "Arial" (font_size 10)))
+	(text "inst" (rect 8 97 26 108)(font "Arial" ))
+	(port
+		(pt 0 24)
+		(input)
+		(text "numer[31..0]" (rect 0 0 71 13)(font "Arial" (font_size 8)))
+		(text "numer[31..0]" (rect 20 18 82 30)(font "Arial" (font_size 8)))
+		(line (pt 0 24)(pt 16 24)(line_width 3))
+	)
+	(port
+		(pt 0 40)
+		(input)
+		(text "denom[31..0]" (rect 0 0 75 13)(font "Arial" (font_size 8)))
+		(text "denom[31..0]" (rect 20 34 84 46)(font "Arial" (font_size 8)))
+		(line (pt 0 40)(pt 16 40)(line_width 3))
+	)
+	(port
+		(pt 0 56)
+		(input)
+		(text "clock" (rect 0 0 31 13)(font "Arial" (font_size 8)))
+		(text "clock" (rect 20 50 45 62)(font "Arial" (font_size 8)))
+		(line (pt 0 56)(pt 16 56))
+	)
+	(port
+		(pt 0 72)
+		(input)
+		(text "aclr" (rect 0 0 22 13)(font "Arial" (font_size 8)))
+		(text "aclr" (rect 20 66 38 78)(font "Arial" (font_size 8)))
+		(line (pt 0 72)(pt 16 72))
+	)
+	(port
+		(pt 176 24)
+		(output)
+		(text "quotient[31..0]" (rect 0 0 81 13)(font "Arial" (font_size 8)))
+		(text "quotient[31..0]" (rect 90 18 159 30)(font "Arial" (font_size 8)))
+		(line (pt 176 24)(pt 160 24)(line_width 3))
+	)
+	(port
+		(pt 176 40)
+		(output)
+		(text "remain[31..0]" (rect 0 0 75 13)(font "Arial" (font_size 8)))
+		(text "remain[31..0]" (rect 95 34 159 46)(font "Arial" (font_size 8)))
+		(line (pt 176 40)(pt 160 40)(line_width 3))
+	)
+	(drawing
+		(text "Numer is UNSIGNED" (rect 71 51 234 112)(font "Arial" ))
+		(text "Denom is UNSIGNED" (rect 69 67 232 144)(font "Arial" ))
+		(text "Pipeline length of 11" (rect 77 83 238 176)(font "Arial" ))
+		(line (pt 16 16)(pt 16 96))
+		(line (pt 16 16)(pt 160 16))
+		(line (pt 16 96)(pt 160 96))
+		(line (pt 160 16)(pt 160 96))
+		(line (pt 0 0)(pt 178 0))
+		(line (pt 178 0)(pt 178 114))
+		(line (pt 0 114)(pt 178 114))
+		(line (pt 0 0)(pt 0 114))
+		(line (pt 0 0)(pt 0 0))
+		(line (pt 0 0)(pt 0 0))
+		(line (pt 0 0)(pt 0 0))
+		(line (pt 0 0)(pt 0 0))
+	)
+)

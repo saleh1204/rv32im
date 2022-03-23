@@ -1,0 +1,10 @@
+set_global_assignment -name IP_TOOL_NAME "LPM_MULT"
+set_global_assignment -name IP_TOOL_VERSION "18.1"
+set_global_assignment -name IP_GENERATED_DEVICE_FAMILY "{Cyclone IV E}"
+set_global_assignment -name VERILOG_FILE [file join $::quartus(qip_path) "mul_unsigned.v"]
+set_global_assignment -name MISC_FILE [file join $::quartus(qip_path) "mul_unsigned.bsf"]
+set_global_assignment -name MISC_FILE [file join $::quartus(qip_path) "mul_unsigned_inst.v"]
+set_global_assignment -name MISC_FILE [file join $::quartus(qip_path) "mul_unsigned_bb.v"]
+set_global_assignment -name MISC_FILE [file join $::quartus(qip_path) "mul_unsigned.inc"]
+set_global_assignment -name MISC_FILE [file join $::quartus(qip_path) "mul_unsigned.cmp"]
+set_global_assignment -name MISC_FILE [file join $::quartus(qip_path) "mul_unsigned_syn.v"]

@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<deploy
+ date="2022.03.21.11:31:16"
+ outputDirectory="/home/saleh/Documents/COE301/rv32im/rv32im_project/ip/sram/">
+ <perimeter>
+  <parameter
+     name="AUTO_GENERATION_ID"
+     type="Integer"
+     defaultValue="0"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_UNIQUE_ID"
+     type="String"
+     defaultValue=""
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_DEVICE_FAMILY"
+     type="String"
+     defaultValue="Cyclone IV E"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_DEVICE"
+     type="String"
+     defaultValue="EP4CE115F29C7"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_DEVICE_SPEEDGRADE"
+     type="String"
+     defaultValue="7"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_CLK_CLOCK_RATE"
+     type="Long"
+     defaultValue="-1"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_CLK_CLOCK_DOMAIN"
+     type="Integer"
+     defaultValue="-1"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_CLK_RESET_DOMAIN"
+     type="Integer"
+     defaultValue="-1"
+     onHdl="0"
+     affectsHdl="1" />
+  <interface name="clk" kind="clock" start="0">
+   <property name="clockRate" value="0" />
+   <property name="externallyDriven" value="false" />
+   <property name="ptfSchematicName" value="" />
+   <port name="clk_clk" direction="input" role="clk" width="1" />
+  </interface>
+  <interface name="reset" kind="reset" start="0">
+   <property name="associatedClock" value="clk" />
+   <property name="synchronousEdges" value="DEASSERT" />
+   <port name="reset_reset" direction="input" role="reset" width="1" />
+  </interface>
+  <interface name="sram" kind="conduit" start="0">
+   <property name="associatedClock" value="" />
+   <property name="associatedReset" value="" />
+   <port name="sram_DQ" direction="bidir" role="DQ" width="16" />
+   <port name="sram_ADDR" direction="output" role="ADDR" width="20" />
+   <port name="sram_LB_N" direction="output" role="LB_N" width="1" />
+   <port name="sram_UB_N" direction="output" role="UB_N" width="1" />
+   <port name="sram_CE_N" direction="output" role="CE_N" width="1" />
+   <port name="sram_OE_N" direction="output" role="OE_N" width="1" />
+   <port name="sram_WE_N" direction="output" role="WE_N" width="1" />
+  </interface>
+  <interface name="sram_io" kind="avalon" start="0">
+   <property name="addressAlignment" value="DYNAMIC" />
+   <property name="addressGroup" value="0" />
+   <property name="addressSpan" value="2097152" />
+   <property name="addressUnits" value="WORDS" />
+   <property name="alwaysBurstMaxBurst" value="false" />
+   <property name="associatedClock" value="clk" />
+   <property name="associatedReset" value="reset" />
+   <property name="bitsPerSymbol" value="8" />
+   <property name="bridgedAddressOffset" value="0" />
+   <property name="bridgesToMaster" value="" />
+   <property name="burstOnBurstBoundariesOnly" value="false" />
+   <property name="burstcountUnits" value="WORDS" />
+   <property name="constantBurstBehavior" value="false" />
+   <property name="explicitAddressSpan" value="0" />
+   <property name="holdTime" value="0" />
+   <property name="interleaveBursts" value="false" />
+   <property name="isBigEndian" value="false" />
+   <property name="isFlash" value="false" />
+   <property name="isMemoryDevice" value="true" />
+   <property name="isNonVolatileStorage" value="false" />
+   <property name="linewrapBursts" value="false" />
+   <property name="maximumPendingReadTransactions" value="2" />
+   <property name="maximumPendingWriteTransactions" value="0" />
+   <property name="minimumUninterruptedRunLength" value="1" />
+   <property name="printableDevice" value="false" />
+   <property name="readLatency" value="0" />
+   <property name="readWaitStates" value="0" />
+   <property name="readWaitTime" value="0" />
+   <property name="registerIncomingSignals" value="false" />
+   <property name="registerOutgoingSignals" value="false" />
+   <property name="setupTime" value="0" />
+   <property name="timingUnits" value="Cycles" />
+   <property name="transparentBridge" value="false" />
+   <property name="wellBehavedWaitrequest" value="false" />
+   <property name="writeLatency" value="0" />
+   <property name="writeWaitStates" value="0" />
+   <property name="writeWaitTime" value="0" />
+   <port name="sram_io_address" direction="input" role="address" width="20" />
+   <port
+       name="sram_io_byteenable"
+       direction="input"
+       role="byteenable"
+       width="2" />
+   <port name="sram_io_read" direction="input" role="read" width="1" />
+   <port name="sram_io_write" direction="input" role="write" width="1" />
+   <port
+       name="sram_io_writedata"
+       direction="input"
+       role="writedata"
+       width="16" />
+   <port name="sram_io_readdata" direction="output" role="readdata" width="16" />
+   <port
+       name="sram_io_readdatavalid"
+       direction="output"
+       role="readdatavalid"
+       width="1" />
+  </interface>
+ </perimeter>
+ <entity
+   path=""
+   parameterizationKey="sram:1.0:AUTO_CLK_CLOCK_DOMAIN=-1,AUTO_CLK_CLOCK_RATE=-1,AUTO_CLK_RESET_DOMAIN=-1,AUTO_DEVICE=EP4CE115F29C7,AUTO_DEVICE_FAMILY=Cyclone IV E,AUTO_DEVICE_SPEEDGRADE=7,AUTO_GENERATION_ID=1647851476,AUTO_UNIQUE_ID=(altera_up_avalon_sram:18.0:AUTO_CLK_CLOCK_RATE=0,AUTO_DEVICE_FAMILY=Cyclone IV E,board=DE2-115,pixel_buffer=false)"
+   instancePathKey="sram"
+   kind="sram"
+   version="1.0"
+   name="sram">
+  <parameter name="AUTO_CLK_CLOCK_RATE" value="-1" />
+  <parameter name="AUTO_GENERATION_ID" value="1647851476" />
+  <parameter name="AUTO_DEVICE" value="EP4CE115F29C7" />
+  <parameter name="AUTO_DEVICE_FAMILY" value="Cyclone IV E" />
+  <parameter name="AUTO_CLK_RESET_DOMAIN" value="-1" />
+  <parameter name="AUTO_CLK_CLOCK_DOMAIN" value="-1" />
+  <parameter name="AUTO_UNIQUE_ID" value="" />
+  <parameter name="AUTO_DEVICE_SPEEDGRADE" value="7" />
+  <generatedFiles>
+   <file
+       path="/home/saleh/Documents/COE301/rv32im/rv32im_project/ip/sram/synthesis/sram.v"
+       type="VERILOG" />
+  </generatedFiles>
+  <childGeneratedFiles>
+   <file
+       path="/home/saleh/Documents/COE301/rv32im/rv32im_project/ip/sram/synthesis/submodules/sram_sram_0.v"
+       type="VERILOG" />
+  </childGeneratedFiles>
+  <sourceFiles>
+   <file
+       path="/home/saleh/Documents/COE301/rv32im/rv32im_project/ip/sram.qsys" />
+  </sourceFiles>
+  <childSourceFiles>
+   <file
+       path="/opt/intelFPGA_lite/18.1/ip/altera/university_program/memory/altera_up_avalon_sram/altera_up_avalon_sram_hw.tcl" />
+  </childSourceFiles>
+  <messages>
+   <message level="Debug" culprit="sram">queue size: 0 starting:sram "sram"</message>
+   <message level="Progress" culprit="min"></message>
+   <message level="Progress" culprit="max"></message>
+   <message level="Progress" culprit="current"></message>
+   <message level="Debug">Transform: CustomInstructionTransform</message>
+   <message level="Debug">No custom instruction connections, skipping transform </message>
+   <message level="Debug" culprit="merlin_custom_instruction_transform"><![CDATA[After transform: <b>1</b> modules, <b>0</b> connections]]></message>
+   <message level="Debug">Transform: MMTransform</message>
+   <message level="Debug">Transform: InterruptMapperTransform</message>
+   <message level="Debug">Transform: InterruptSyncTransform</message>
+   <message level="Debug">Transform: InterruptFanoutTransform</message>
+   <message level="Debug">Transform: AvalonStreamingTransform</message>
+   <message level="Debug">Transform: ResetAdaptation</message>
+   <message level="Debug" culprit="sram"><![CDATA["<b>sram</b>" reuses <b>altera_up_avalon_sram</b> "<b>submodules/sram_sram_0</b>"]]></message>
+   <message level="Debug" culprit="sram">queue size: 0 starting:altera_up_avalon_sram "submodules/sram_sram_0"</message>
+   <message level="Info" culprit="sram_0">Starting Generation of the SRAM Controller</message>
+   <message level="Info" culprit="sram_0"><![CDATA["<b>sram</b>" instantiated <b>altera_up_avalon_sram</b> "<b>sram_0</b>"]]></message>
+  </messages>
+ </entity>
+ <entity
+   path="submodules/"
+   parameterizationKey="altera_up_avalon_sram:18.0:AUTO_CLK_CLOCK_RATE=0,AUTO_DEVICE_FAMILY=Cyclone IV E,board=DE2-115,pixel_buffer=false"
+   instancePathKey="sram:.:sram_0"
+   kind="altera_up_avalon_sram"
+   version="18.0"
+   name="sram_sram_0">
+  <parameter name="AUTO_CLK_CLOCK_RATE" value="0" />
+  <parameter name="pixel_buffer" value="false" />
+  <parameter name="AUTO_DEVICE_FAMILY" value="Cyclone IV E" />
+  <parameter name="board" value="DE2-115" />
+  <generatedFiles>
+   <file
+       path="/home/saleh/Documents/COE301/rv32im/rv32im_project/ip/sram/synthesis/submodules/sram_sram_0.v"
+       type="VERILOG" />
+  </generatedFiles>
+  <childGeneratedFiles/>
+  <sourceFiles>
+   <file
+       path="/opt/intelFPGA_lite/18.1/ip/altera/university_program/memory/altera_up_avalon_sram/altera_up_avalon_sram_hw.tcl" />
+  </sourceFiles>
+  <childSourceFiles/>
+  <instantiator instantiator="sram" as="sram_0" />
+  <messages>
+   <message level="Debug" culprit="sram">queue size: 0 starting:altera_up_avalon_sram "submodules/sram_sram_0"</message>
+   <message level="Info" culprit="sram_0">Starting Generation of the SRAM Controller</message>
+   <message level="Info" culprit="sram_0"><![CDATA["<b>sram</b>" instantiated <b>altera_up_avalon_sram</b> "<b>sram_0</b>"]]></message>
+  </messages>
+ </entity>
+</deploy>

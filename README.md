@@ -3,11 +3,11 @@ RV32IM System-on-Chip (SOC)
 
 What Is This?
 -------------
-This repository contains a five stage pipelined RISC-V (RV32IM) processor and two peripherals. The target FPGA is Intel (Altera) DE2-115.
+This repository contains a five stage pipelined RISC-V (RV32IM) processor and multiple peripherals. The target FPGA is Intel (Altera) DE2-115.
 
-What are the two peripherals?
+What are the included peripherals?
 -------------
-Two peripherals are connected to the processor through Memory Mapped Input/Output (MMIO). Firstly, GPIO peripheral which controls the onboard nine Green LEDs, 18 Red LEDs and 18 switches. Secondly, the VGA peripheral which generate a video signal through the onboard VGA connector. The Base address for the GPIO module is 0x8000_0000, while the base address space for the VGA is 0x4000_0000. The VGA module is still under development.
+Three peripherals are connected to the processor through Memory Mapped Input/Output (MMIO). Firstly, GPIO peripheral which controls the onboard 9 Green LEDs, 18 Red LEDs, 18 switches, and 8 7-Segment Displays. Secondly, the VGA peripheral which generate a video signal through the onboard VGA connector. Thirdly, LCD module which controls the LCD Display attached to the FPGA. The Base address for the GPIO module is 0x8000_0000, while the base address space for the VGA is 0x4000_0000. The base address for the LCD module is 0x5000_0000. The VGA module is still under development.
 
 What HDL was used to develop this project?
 -------------

@@ -115,14 +115,14 @@ module CPU (
                     instruction2[30:25], instruction2[11:08], 1'b0};
     assign immU20 = instruction2[31:12];
     assign immJ20 = {instruction2[31], instruction2[19:12],
-                    instruction2[20], instruction2[30:21], 1'b0}; // Check this one
+                    instruction2[20], instruction2[30:21]};
 
     // Immediates construction
     assign immI32 = {{20{immI12[11]}},immI12};
     assign immS32 = {{20{immS12[11]}},immS12};
     assign immB32 = {{19{immB13[11]}},immB13};
     assign immU32 = {immU20, 12'd0};
-    assign immJ32 = {{12{immJ20[11]}},immJ20};
+    assign immJ32 = {{11{immJ20[11]}},immJ20, 1'b0};
 
     // Register File
     RegisterFile rf
@@ -185,15 +185,15 @@ module CPU (
                 memWrite3   <= memWrite2;
             end
             case (forwardB)
-              2'd0: 
+              2'd0:
                 busB3 <= busB2;
-              2'd1: 
+              2'd1:
                 busB3 <= aluResult3;
-              2'd2: 
+              2'd2:
                 busB3 <= memResult4;
               2'd3:
                 busB3 <= busW5;
-              default: 
+              default:
                 busB3 <= 32'd0;
             endcase
             regWrite5        <= regWrite4;
