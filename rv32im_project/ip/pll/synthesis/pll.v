@@ -4,32 +4,38 @@
 
 `timescale 1 ps / 1 ps
 module pll (
-		output wire  c0_clk,      //    c0.clk
-		input  wire  clk_clk,     //   clk.clk
-		input  wire  reset_reset  // reset.reset
+		output wire        c0_clk,                    //                 c0.clk
+		input  wire        clk_clk,                   //                clk.clk
+		input  wire        pll_areset_conduit_export, // pll_areset_conduit.export
+		input  wire        pll_pll_slave_read,        //      pll_pll_slave.read
+		input  wire        pll_pll_slave_write,       //                   .write
+		input  wire [1:0]  pll_pll_slave_address,     //                   .address
+		output wire [31:0] pll_pll_slave_readdata,    //                   .readdata
+		input  wire [31:0] pll_pll_slave_writedata,   //                   .writedata
+		input  wire        reset_reset                //              reset.reset
 	);
 
 	pll_pll pll (
-		.clk                (clk_clk),     //       inclk_interface.clk
-		.reset              (reset_reset), // inclk_interface_reset.reset
-		.read               (),            //             pll_slave.read
-		.write              (),            //                      .write
-		.address            (),            //                      .address
-		.readdata           (),            //                      .readdata
-		.writedata          (),            //                      .writedata
-		.c0                 (c0_clk),      //                    c0.clk
-		.areset             (),            //        areset_conduit.export
-		.scandone           (),            //           (terminated)
-		.scandataout        (),            //           (terminated)
-		.locked             (),            //           (terminated)
-		.phasedone          (),            //           (terminated)
-		.phasecounterselect (4'b0000),     //           (terminated)
-		.phaseupdown        (1'b0),        //           (terminated)
-		.phasestep          (1'b0),        //           (terminated)
-		.scanclk            (1'b0),        //           (terminated)
-		.scanclkena         (1'b0),        //           (terminated)
-		.scandata           (1'b0),        //           (terminated)
-		.configupdate       (1'b0)         //           (terminated)
+		.clk                (clk_clk),                   //       inclk_interface.clk
+		.reset              (reset_reset),               // inclk_interface_reset.reset
+		.read               (pll_pll_slave_read),        //             pll_slave.read
+		.write              (pll_pll_slave_write),       //                      .write
+		.address            (pll_pll_slave_address),     //                      .address
+		.readdata           (pll_pll_slave_readdata),    //                      .readdata
+		.writedata          (pll_pll_slave_writedata),   //                      .writedata
+		.c0                 (c0_clk),                    //                    c0.clk
+		.areset             (pll_areset_conduit_export), //        areset_conduit.export
+		.scandone           (),                          //           (terminated)
+		.scandataout        (),                          //           (terminated)
+		.locked             (),                          //           (terminated)
+		.phasedone          (),                          //           (terminated)
+		.phasecounterselect (4'b0000),                   //           (terminated)
+		.phaseupdown        (1'b0),                      //           (terminated)
+		.phasestep          (1'b0),                      //           (terminated)
+		.scanclk            (1'b0),                      //           (terminated)
+		.scanclkena         (1'b0),                      //           (terminated)
+		.scandata           (1'b0),                      //           (terminated)
+		.configupdate       (1'b0)                       //           (terminated)
 	);
 
 endmodule

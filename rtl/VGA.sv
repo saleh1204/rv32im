@@ -53,12 +53,8 @@ module VGA #(
   logic displayTime;
   logic [$clog2(WholeLine)-1:0] h_pixel_counter;
   logic [$clog2(WholeFrame)-1:0] v_pixel_counter;
-
-  assign sram_write         = WRSTB && (ADDR >= BASEADDRESS) && (ADDR <= BASEADDRESS + (WidthPixels + HeightPixels));
-  assign sram_read          = displayTime && (~sram_write);
-  assign sram_din           = DATA_I[15:00];
+ 
   assign sram_byteenable    = 2'd3; // always enable both bytes
-  assign sram_local_address = (sram_write) ? (ADDR[15:00]) : (lADDR);
 
   assign VGA_CLK     = pixel_clk;
   assign VGA_SYNC_N  = displayTime;
@@ -93,10 +89,32 @@ module VGA #(
     .sram_io_readdatavalid (sram_dout_valid)        // .readdatavalid
   );
 
+
+  always_ff @(posedge ACLK or posedge RESET) begin : driveSRAM
+    if (RESET == 1'b1) begin
+      sram_write         <= 'd0;
+      sram_din           <= 'd0;
+      sram_local_address <= 'd0;
+      sram_read          <= 'd0;
+    end
+    else begin
+      if (WRSTB && (ADDR >= BASEADDRESS) && (ADDR <= BASEADDRESS + (WidthPixels + HeightPixels))) begin
+        sram_write         <= 1'b1;
+        sram_local_address <= ADDR[15:00];
+      end
+      else begin
+        sram_local_address <= lADDR;
+        sram_read          <= displayTime;
+      end    
+      sram_din    <= DATA_I[15:00];
+    end
+  end: driveSRAM
+
   always_ff @(posedge pixel_clk or posedge RESET) begin : driveSyncs
     if (RESET == 1'b1) begin
-      VGA_HS <= 'd0;
-      VGA_VS <= 'd0;
+      VGA_HS       <= 'd0;
+      VGA_VS       <= 'd0;
+      displayTime  <= 'd0;
     end
     else begin
       VGA_HS      <= ~((h_pixel_counter >= (WidthPixels + HFrontPorch)) &&
