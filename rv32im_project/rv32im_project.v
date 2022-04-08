@@ -106,7 +106,12 @@ module rv32im_project(
     .LCD_EN(LCD_EN),
     .LCD_ON(LCD_ON),
     .LCD_RS(LCD_RS),
-    .LCD_RW(LCD_RW)
+    .LCD_RW(LCD_RW),
+	  //////////// RS232 //////////
+    .UART_CTS(UART_CTS),
+    .UART_RTS(UART_RTS),
+    .UART_RXD(UART_RXD),
+    .UART_TXD(UART_TXD)
   );
 
 endmodule

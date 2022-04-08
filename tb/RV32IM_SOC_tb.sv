@@ -20,7 +20,7 @@ module RV32IM_SOC_tb;
   //////////// SRAM //////////
   logic [19:00] SRAM_ADDR;
   logic         SRAM_CE_N;
-  logic [15:00] SRAM_DQ;
+  wire logic [15:00] SRAM_DQ;
   logic         SRAM_LB_N;
   logic         SRAM_OE_N;
   logic         SRAM_UB_N;
@@ -36,11 +36,16 @@ module RV32IM_SOC_tb;
   logic [06:00] HEX7;
   //////////// LCD //////////
   logic         LCD_BLON;
-  logic [07:00] LCD_DATA;
+  wire logic [07:00] LCD_DATA;
   logic         LCD_EN;
   logic         LCD_ON;
   logic         LCD_RS;
   logic         LCD_R;
+  //////////// RS232 //////////
+  logic UART_CTS;
+  logic UART_RTS;
+  logic UART_RXD;
+  logic UART_TXD;
 
 
   RV32IM_SOC dut (
@@ -52,9 +57,9 @@ module RV32IM_SOC_tb;
             .VGA_CLK(VGA_CLK),
             .VGA_BLANK_N(VGA_BLANK_N),
             .VGA_SYNC_N(VGA_SYNC_N),
-            .RED(VGA_R),
-            .GREEN(VGA_G),
-            .BLUE(VGA_B),
+            .VGA_R(VGA_R),
+            .VGA_G(VGA_G),
+            .VGA_B(VGA_B),
             //////////// LED //////////
             .LEDG(LEDG),
             .LEDR(LEDR),
@@ -83,7 +88,12 @@ module RV32IM_SOC_tb;
             .LCD_EN(LCD_EN),
             .LCD_ON(LCD_ON),
             .LCD_RS(LCD_RS),
-            .LCD_RW(LCD_RW)
+            .LCD_RW(LCD_RW),
+            //////////// RS232 //////////
+            .UART_CTS(UART_CTS),
+            .UART_RTS(UART_RTS),
+            .UART_RXD(UART_RXD),
+            .UART_TXD(UART_TXD)
   );
 
   initial begin
@@ -95,10 +105,10 @@ module RV32IM_SOC_tb;
     RESET = 1'b0;
     repeat(10) @(negedge CLK);
     RESET = 1'b1;
-    repeat(100) @(negedge CLK);
+    repeat(10000) @(negedge CLK);
     $stop;
   end
-  always_ff begin
+  always begin
     #5 CLK = ~CLK;
   end
 

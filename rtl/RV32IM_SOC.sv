@@ -38,7 +38,12 @@ module RV32IM_SOC (
 	output		  logic         LCD_EN,
 	output      logic         LCD_ON,
 	output      logic         LCD_RS,
-	output      logic         LCD_RW
+	output      logic         LCD_RW,
+  //////////// RS232 //////////
+  input 		          		UART_CTS,
+  output		          		UART_RTS,
+  input 		          		UART_RXD,
+  output		          		UART_TXD
 );
 
   logic [31:00] ADDR;
@@ -123,6 +128,21 @@ module RV32IM_SOC (
     .LCD_ON(LCD_ON),
     .LCD_RS(LCD_RS),
     .LCD_RW(LCD_RW)
+  );
+
+  RS232 rs232 (
+    .ACLK(ACLK),
+    .RESET(~ARESETN),
+    .ADDR(ADDR),
+    .DATA_I(DATA_OUT_CPU),
+    .DATA_O(DATA_IN_CPU),
+    .WRSTB(WRSTB),
+    .RDSTB(RDSTB),
+    //////////// RS232 //////////
+    .UART_CTS(UART_CTS),
+    .UART_RTS(UART_RTS),
+    .UART_RXD(UART_RXD),
+    .UART_TXD(UART_TXD)
   );
 
 endmodule: RV32IM_SOC
